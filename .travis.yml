@@ -217,6 +217,9 @@ jobs:
           - USER_ANALYTICS_ENABLED: 'True'
           - SESSION_EXPIRED_CONTROL_ENABLED: 'True'
           - CELERY_ALWAYS_EAGER: 'True'
+          - DATABASE_URL: 'postgis://geonode:geonode@localhost:5432/upload_test'
+          - GEODATABASE_URL: 'postgis://geonode:geonode@localhost:5432/upload_test'
+          - DEFAULT_BACKEND_DATASTORE: 'datastore'
 
     - stage: integration-tests
       name: "GeoServer Integration Tests"
